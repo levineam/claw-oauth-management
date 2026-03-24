@@ -1,0 +1,40 @@
+{
+  "id": "provider-switch",
+  "name": "claw-provider-switch",
+  "version": "0.1.0",
+  "description": "Automated AI provider credit monitoring and switching for OpenClaw",
+  "main": "src/extension.js",
+  "type": "module",
+  "hooks": ["session_start", "model_request", "cron"],
+  "configSchema": {
+    "type": "object",
+    "properties": {
+      "enabled": {
+        "type": "boolean",
+        "default": true,
+        "description": "Enable/disable automatic provider switching"
+      },
+      "monitorIntervalMs": {
+        "type": "number",
+        "default": 300000,
+        "description": "Credit monitoring interval in milliseconds (default: 5 minutes)"
+      },
+      "switchThresholdPercent": {
+        "type": "number",
+        "default": 10,
+        "description": "Switch providers when remaining credits fall below this percentage"
+      },
+      "providers": {
+        "type": "array",
+        "items": { "type": "string" },
+        "default": [],
+        "description": "Ordered list of provider profiles to cycle through"
+      },
+      "reconcileOnSwitch": {
+        "type": "boolean",
+        "default": true,
+        "description": "Run multi-layer reconciliation after each switch"
+      }
+    }
+  }
+}
