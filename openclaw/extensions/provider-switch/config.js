@@ -1,5 +1,5 @@
 /**
- * OpenClaw integration config for claw-provider-switch
+ * OpenClaw integration config for claw-oauth-management
  *
  * This file is loaded by the OpenClaw config system when the extension is installed.
  * It defines defaults and validation for the provider-switch extension settings.

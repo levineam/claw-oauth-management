@@ -1,17 +1,17 @@
 {
-  "name": "claw-provider-switch",
+  "name": "claw-oauth-management",
   "version": "0.1.0",
-  "description": "Standalone OpenClaw extension for automated AI provider credit monitoring and switching",
+  "description": "OpenClaw extension for automatic OAuth provider switching and credit lifecycle management",
   "main": "src/extension.js",
   "type": "module",
   "bin": {
-    "claw-provider-switch": "./cli/provider-switch.js"
+    "claw-oauth-management": "./cli/provider-switch.js"
   },
   "scripts": {
     "start": "node src/extension.js",
     "test": "node --test tests/"
   },
-  "keywords": ["openclaw", "extension", "provider-switch", "ai-credits"],
+  "keywords": ["openclaw", "extension", "oauth", "provider-switch", "ai-credits"],
   "license": "MIT",
   "peerDependencies": {
     "openclaw": ">=1.0.0"

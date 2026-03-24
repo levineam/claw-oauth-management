@@ -1,8 +1,8 @@
 {
   "id": "provider-switch",
-  "name": "claw-provider-switch",
+  "name": "claw-oauth-management",
   "version": "0.1.0",
-  "description": "Automated AI provider credit monitoring and switching for OpenClaw",
+  "description": "OpenClaw extension for automatic OAuth provider switching and credit lifecycle management",
   "main": "src/extension.js",
   "type": "module",
   "hooks": ["session_start", "model_request", "cron"],

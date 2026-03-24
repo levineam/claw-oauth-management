@@ -1,5 +1,5 @@
 /**
- * claw-provider-switch - OpenClaw extension for automated provider switching
+ * claw-oauth-management - OpenClaw extension for automatic OAuth provider switching
  *
  * Standalone extension that integrates with OpenClaw through well-defined APIs
  * to monitor AI provider credits and automatically switch when thresholds are hit.
@@ -11,7 +11,7 @@ import CreditMonitor from './monitor/credit-monitor.js';
 import SwitchEngine from './engine/switch-engine.js';
 import MultiLayerReconciler from './reconcile/multi-layer.js';
 
-const PREFIX = '[claw-provider-switch]';
+const PREFIX = '[claw-oauth-management]';
 
 const DEFAULT_CONFIG = {
   enabled: true,

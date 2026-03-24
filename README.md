@@ -1,6 +1,6 @@
-# claw-provider-switch
+# claw-oauth-management
 
-Standalone OpenClaw extension for automated AI provider credit monitoring and switching.
+OpenClaw extension for automatic OAuth provider switching and credit lifecycle management.
 
 ## Overview
 
@@ -9,7 +9,7 @@ Monitors credit balances across configured AI provider profiles and automaticall
 ## Architecture
 
 ```
-claw-provider-switch/
+claw-oauth-management/
 ├── src/
 │   ├── extension.js              # Main plugin entry point (OpenClaw hook)
 │   ├── monitor/
@@ -32,11 +32,11 @@ claw-provider-switch/
 
 ```bash
 # From the extension directory:
-openclaw extension install ./claw-provider-switch
+openclaw extension install ./claw-oauth-management
 
 # Or via npm (future):
-npm install claw-provider-switch
-openclaw extension install claw-provider-switch
+npm install claw-oauth-management
+openclaw extension install claw-oauth-management
 ```
 
 ## Configuration
@@ -62,11 +62,11 @@ In your `~/.openclaw/openclaw.json`:
 ## CLI
 
 ```bash
-claw-provider-switch status       # Active provider + credit levels
-claw-provider-switch list         # All configured providers
-claw-provider-switch switch <p>   # Manual switch (runtime required)
-claw-provider-switch history      # Recent switch log
-claw-provider-switch config       # Current config
+claw-oauth-management status       # Active provider + credit levels
+claw-oauth-management list         # All configured providers
+claw-oauth-management switch <p>   # Manual switch (runtime required)
+claw-oauth-management history      # Recent switch log
+claw-oauth-management config       # Current config
 ```
 
 ## Extension API Integration Points

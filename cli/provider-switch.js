@@ -1,15 +1,15 @@
 #!/usr/bin/env node
 /**
- * claw-provider-switch CLI
+ * claw-oauth-management CLI
  *
  * Extends the OpenClaw CLI with provider-switch management commands.
  *
  * Usage:
- *   claw-provider-switch status          Show current active provider and credit levels
- *   claw-provider-switch list            List all configured providers
- *   claw-provider-switch switch <name>   Manually switch to a specific provider
- *   claw-provider-switch history         Show recent switch history
- *   claw-provider-switch config          Show current extension config
+ *   claw-oauth-management status          Show current active provider and credit levels
+ *   claw-oauth-management list            List all configured providers
+ *   claw-oauth-management switch <name>   Manually switch to a specific provider
+ *   claw-oauth-management history         Show recent switch history
+ *   claw-oauth-management config          Show current extension config
  */
 
 import { readFileSync, existsSync } from 'fs';
@@ -18,7 +18,7 @@ import { resolve } from 'path';
 const [, , command, ...args] = process.argv;
 
 const HELP = `
-claw-provider-switch — Automated AI provider credit monitoring and switching
+claw-oauth-management — Automatic OAuth provider switching and credit lifecycle management
 
 Commands:
   status              Show active provider and cached credit levels
@@ -88,7 +88,7 @@ async function cmdList() {
 
 async function cmdSwitch(provider) {
   if (!provider) {
-    console.error('Usage: claw-provider-switch switch <provider>');
+    console.error('Usage: claw-oauth-management switch <provider>');
     process.exit(1);
   }
   // CLI switches are advisory — actual switch requires the extension runtime
